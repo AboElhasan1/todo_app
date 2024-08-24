@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../App colors.dart';
 
 class ApplicationThemeManager {
@@ -14,11 +13,11 @@ class ApplicationThemeManager {
     appBarTheme: AppBarTheme(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(25.r),
-          bottomRight: Radius.circular(25.r),
+          bottomLeft: Radius.circular(25),
+          bottomRight: Radius.circular(25),
         ),
       ),
-      toolbarHeight: 60.h,
+      toolbarHeight: 60,
       iconTheme: const IconThemeData(
         color: Colors.white,
         size: 30,
@@ -47,11 +46,11 @@ class ApplicationThemeManager {
     appBarTheme: AppBarTheme(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(25.r),
-          bottomRight: Radius.circular(25.r),
+          bottomLeft: Radius.circular(25),
+          bottomRight: Radius.circular(25),
         ),
       ),
-      toolbarHeight: 60.h,
+      toolbarHeight: 60,
       iconTheme: const IconThemeData(
         color: Colors.white,
         size: 30,

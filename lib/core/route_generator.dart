@@ -1,29 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app1/MyApp.dart';
 import 'package:todo_app1/home.dart';
-import 'package:todo_app1/core/page_route_name.dart';
 import 'package:todo_app1/module/login/login.dart';
 import 'package:todo_app1/module/regestration/registeration.dart';
 import 'package:todo_app1/module/settings/settings.dart';
 
-class RouteGenerator {
- static Route<dynamic>onGenerateRoute(RouteSettings settings) {
-    switch (settings.name) {
-      case PageRouteName.login:
-        return MaterialPageRoute(
-            builder: (context) => LoginView(), settings: settings);
-      case PageRouteName.register:
-        return MaterialPageRoute(
-            builder: (context) => registeration(), settings: settings);
-      case PageRouteName.home:
-        return MaterialPageRoute(
-            builder: (context) => home(), settings: settings);
-      case PageRouteName.Settings:
-        return MaterialPageRoute(
-            builder: (context) => settingsview(), settings: settings);
-        default: return MaterialPageRoute(
-            builder: (context) => LoginView(), settings: settings);
+class Routes {
+  static const String LoginScreen = "login";
+  static const String SignupScreen = "register";
+  static const String settings = "Settings";
+  static const String tasks = "tasks";
+  static const String HomeScreen = "home";
+}
 
+class RouteGenerator {
+  static Route<dynamic> onGenerateRoute(RouteSettings settings) {
+    switch (settings.name) {
+      case Routes.LoginScreen:
+        return MaterialPageRoute(
+            builder: (context) => const LoginView(), settings: settings);
+      case Routes.SignupScreen:
+        return MaterialPageRoute(
+            builder: (context) => const RegisterScreen(), settings: settings);
+      case Routes.HomeScreen:
+        return MaterialPageRoute(
+            builder: (context) => const Home(), settings: settings);
+      case Routes.settings:
+        return MaterialPageRoute(
+            builder: (context) => const settingsview(), settings: settings);
+      default:
+        return MaterialPageRoute(
+            builder: (context) => const LoginView(), settings: settings);
     }
   }
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:todo_app1/styles/text_style.dart';
 
 import 'app_colors.dart';
@@ -15,11 +14,11 @@ ThemeData lightThemen = ThemeData(
   appBarTheme:  AppBarTheme(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.only(
-        bottomLeft: Radius.circular(25.r),
-        bottomRight: Radius.circular(25.r),
+        bottomLeft: Radius.circular(25),
+        bottomRight: Radius.circular(25),
       ),
     ),
-    toolbarHeight: 60.h,
+    toolbarHeight: 60,
     iconTheme: const IconThemeData(
       color: Colors.white,
       size: 30,
@@ -51,11 +50,11 @@ ThemeData darkTheme = ThemeData(
   appBarTheme:  AppBarTheme(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.only(
-        bottomLeft: Radius.circular(25.r),
-        bottomRight: Radius.circular(25.r),
+        bottomLeft: Radius.circular(25),
+        bottomRight: Radius.circular(25),
       ),
     ),
-    toolbarHeight: 60.h,
+    toolbarHeight: 60,
     iconTheme: const IconThemeData(
       color: Colors.white,
       size: 30,
