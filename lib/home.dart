@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 import 'App colors.dart';
 import 'module/tasks/widget/add_task_sheet_widget1.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class home extends StatefulWidget {
+  const home({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<home> createState() => _homeState();
 }
 
-class _HomeState extends State<Home> {
-  int currentIndex = 0;
+class _homeState extends State<home> {
+  int currentindex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -21,50 +21,43 @@ class _HomeState extends State<Home> {
       floatingActionButton: FloatingActionButton(
           elevation: 3,
           onPressed: () {
-            showModalBottomSheet(
-              context: context,
-              builder: (context) => const AddTaskBottomSheet(),
-            );
+            showModalBottomSheet(context: context, builder: (context) => AddTaskBottomSheet(),);
           },
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
           backgroundColor: Colors.white,
-          child: const CircleAvatar(
-            radius: 26,
+            child: CircleAvatar(
             child: Icon(
               Icons.add,
               size: 35,
             ),
+            radius: 26,
           )),
-      bottomNavigationBar: BottomAppBar(
-        height: 90,
-        notchMargin: 12,
-        shape: const CircularNotchedRectangle(),
+      bottomNavigationBar: BottomAppBar(height: 90,notchMargin: 12,
+        shape: CircularNotchedRectangle(),
         child: BottomNavigationBar(
-            elevation: 0,
+          elevation: 0,
             backgroundColor: Colors.transparent,
             showUnselectedLabels: false,
             showSelectedLabels: false,
-            currentIndex: currentIndex,
+            currentIndex: currentindex,
             onTap: (value) => setState(() {
-                  currentIndex = value;
+                  currentindex = value;
                 }),
-            items: const [
+            items: [
               BottomNavigationBarItem(
                   icon: ImageIcon(AssetImage("assets/3.0x/icon_list@3x.png")),
                   label: 'Tasks'),
               BottomNavigationBarItem(
-                  icon:
-                      ImageIcon(AssetImage("assets/3.0x/icon_settings@3x.png")),
+                  icon: ImageIcon(AssetImage("assets/3.0x/icon_settings@3x.png")),
                   label: 'Tasks')
             ]),
       ),
       appBar: AppBar(
         backgroundColor: AppColors.lightBlueColor,
         toolbarHeight: 157,
-        centerTitle: false,
-        title: const Padding(
-          padding: EdgeInsets.only(left: 52),
+        title: Padding(
+          padding: const EdgeInsets.only(left: 52),
           child: Text('To Do List',
               style: TextStyle(
                 fontWeight: FontWeight.w700,
